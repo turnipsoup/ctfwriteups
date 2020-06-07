@@ -1,5 +1,30 @@
 # Peculiar Packet Capture
 
+### Challenge Text
+
+```
+Agent,
+
+We have a situation brewing. Last week there was an attack on the prime minister
+of Morocco. His motorcade was stopped by a road blockade where heavily armed men
+opened fire on them. Fortunately, the prime minister was able to escape safely but
+many personnel and a few other ministers did not.
+
+ATLAS, a multi-national Private Military Corporation (PMC) based in Colorado, USA,
+is our main suspect. We believe they were hired to conduct the hit by the opposition
+political party.
+
+We flew Agent Jason to Colorado to investigate further. He gained access to their
+building's reception area dressed in a suit acting as a potential client with an
+appointment. He was able to intercept wireless network traffic from their corporate
+wireless network before being escorted out by guards when they realised the bluff.
+
+The network capture is attached below, see if you can recover any important documents
+which could help us tie ATLAS to the Morocco incident.
+```
+
+### Challenge Work
+
 First we open the thing up in Wireshark. We notice a total of three devices. Here we will nickname them: `Zte`, `Gemtek`, `Azurewav`. Looking at the first packet it is a beacon packet from `Zte`. So `Zte` is a router of some kind. `Gemtek` then authenticates to `Zte`. `Gemtek` then starts a conversation with `Azurewav`. 
 
 Looking at the conversation between `Gemtek` and `Azurewav` we can determine that `Zte` is just a wireless device betwixt them:

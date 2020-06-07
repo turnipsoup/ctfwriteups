@@ -1,5 +1,13 @@
 # Cut Short
 
+### Challenge Text
+
+```
+This image refuses to open in anything, which is a bit odd. Open it for the flag!
+```
+
+### Challenge Work
+
 First, we look at the image presented to us:
 
 ```
