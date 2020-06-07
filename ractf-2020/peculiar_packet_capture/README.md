@@ -2,7 +2,7 @@
 
 First we open the thing up in Wireshark. We notice a total of three devices. Here we will nickname them: `Zte`, `Gemtek`, `Azurewav`. Looking at the first packet it is a beacon packet from `Zte`. So `Zte` is a router of some kind. `Gemtek` then authenticates to `Zte`. `Gemtek` then starts a conversation with `Azurewav`. 
 
-Looking at the conversation between `Gemtek` and `Azurewav` as can determine that `Zte` is just a wireless device betwixt them:
+Looking at the conversation between `Gemtek` and `Azurewav` we can determine that `Zte` is just a wireless device betwixt them:
 
 ```
 BSS Id: Zte_c0:59:b3 (c0:fd:84:c0:59:b3)
