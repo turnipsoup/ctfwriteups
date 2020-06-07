@@ -5,7 +5,7 @@
 First thing we want to do in binwalk that file:
 
 ```
-PhillipJFryIV ractf/monster » binwalk aero_chord.mp3                                127 ↵
+PhillipJFryIV ractf/monster » binwalk -e aero_chord.mp3                                127 ↵
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
@@ -14,12 +14,12 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 5252619       0x50260B        End of Zip archive, footer length: 22
 ```
 
-Playing OwO.wav produces clicking sounds that make you think something is hidden. Sure enough we see a hint when we look at the spectrogram: `Password{Shad0ws}`. 
+Unzipping the `.zip` and then playing OwO.wav produces clicking sounds that make you think something is hidden. Sure enough we see a hint when we look at the spectrogram: `Password{Shad0ws}`. 
 
 We run binwalk on the new file:
 
 ```
-PhillipJFryIV monster/_aero_chord.mp3.extracted » binwalk OwO.wav
+PhillipJFryIV monster/_aero_chord.mp3.extracted » binwalk -e OwO.wav
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
@@ -27,6 +27,6 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 191602        0x2EC72         End of Zip archive, footer length: 22
 ```
 
-This data is not compatible witn `unzip` so we use `7za x file.zip`. It prompts us for a password, which we give, and now we can read our flag.
+This `.zip` is not compatible witn `unzip` so we use `7za x file.zip`. It prompts us for a password, which we give, and now we can read our flag.
 
 `ractf{M0nst3rcat_In5tin3t}`
