@@ -39,4 +39,11 @@ for ccn in cipher_colors_numbers:
 print(flag_string)
 ```
 
+```
+PhillipJFryIV redpwn/12-shades » python3 solve.py
+fxag{9u3ss1n9_1s_4n_4rt}
+```
+
+My math was off on the second pair, but it was an easy enough fix from x -> l
+
 I may come back to this and resolve it in a more programmatic fashion.
