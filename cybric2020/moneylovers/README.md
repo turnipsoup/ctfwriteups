@@ -10,7 +10,7 @@
 
 Looking at the packet capture we see that this is a ton of TLSv1.2 connections, as if somebody is connecting to the same place over and over. Looking closely we do see it is reaching out to a public IP address.... `https://95.217.22.76/`
 
-![webscreen](/Users/jeremy/Documents/notes/ctfs/cybric2020/moneylovers/webscreen.png)
+![webscreen](https://raw.githubusercontent.com/turnipsoup/ctfwriteups/master/cybric2020/moneylovers/webscreen.png)
 
 Looking at the source code of this page we notice this odd bit:
 
