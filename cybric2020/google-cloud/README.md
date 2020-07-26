@@ -60,5 +60,5 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 We can see a ton of JPEG images ([or at least headers](https://github.com/corkami/pics/blob/master/binary/JPG.png)). If you scroll down in your hex editor you will see that the JPEGs are getting longer. Scrolling to the bottom and copying from the last JPEG header down give us our file.
 
-![flag](/Users/jeremy/Documents/notes/ctfs/cybric2020/google-cloud/flag.jpg)
+![flag](https://raw.githubusercontent.com/turnipsoup/ctfwriteups/master/cybric2020/google-cloud/flag.jpg)
 
