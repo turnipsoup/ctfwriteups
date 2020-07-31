@@ -114,6 +114,6 @@ Whale watching....that format also looks familiar....
 ]
 ```
 
-You can see our flag is in the CMD variable:
+You can see our flag is in the CMD variable of one of the layers:
 
 >flag{call_me_ishmael}
