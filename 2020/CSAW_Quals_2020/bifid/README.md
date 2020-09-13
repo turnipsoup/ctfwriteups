@@ -96,3 +96,6 @@ just some unnecessary text that holds absolutely no meaning whatsoever and bears
 flag{t0ld_y4_1t_w4s_3z}
 ```
 
+### Further Thoughts
+
+Looking back: this challenge should have noted that you needed multiple keys to get through, without an admin hint. Releasing hints on the challenge itself throughout the CTF is fine and normal. However - nasking the admins personally for a hint and then finding out you needed multiple keys seems "guessy" at best. If they had included this in one of the dropped hints on the challenge I would not have thought twice about it.
