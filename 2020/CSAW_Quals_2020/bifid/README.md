@@ -16,7 +16,7 @@ difib % nc crypto.chal.csaw.io 5004
 Sounds bogus! Scram, you're not getting in!
 ```
 
-Due to the name of the challenge, and based on the contents of the files, we can guess that this is a [Bifid Cipher](https://en.wikipedia.org/wiki/Bifid_cipher). The challenge also came with a few hints, as so few people had solved this challenge by the time we did:
+Due to the name of the challenge, and based on the contents of the files, we can guess that this is a [Bifid Cipher](https://en.wikipedia.org/wiki/Bifid_cipher). The challenge also came with a few hints, as so few people had solved this challenge by the time we did (we got the third solve):
 
 >1) We only want perfect ramblings!!
 >2) NEAR perfect ramblings? it seems our cipher is a little off...
