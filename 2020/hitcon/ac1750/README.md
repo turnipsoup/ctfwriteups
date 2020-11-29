@@ -10,7 +10,7 @@ Examination of the packet capture shows us a lot of conversations between 192.16
 
 If we look at all of the conversations (Wireshark > Statistics > Conversations) we can see that the final message sent from the router to the host on 192.168.0.105 appears to be a directory listing of `/` from some Unix system. This got me to thinking that remote code execution was done somehow. I then googled "AC1750 remote code execution" and [found this page](https://www.rapid7.com/db/modules/exploit/linux/misc/tplink_archer_a7_c7_lan_rce/).
 
-I looked at the packets a bit more and tried to extract data from the packets behind the final listing, but did not find anything. I think decided to look at the [source code](https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/misc/tplink_archer_a7_c7_lan_rce.rb) of the exploit, as it was linked on the above URL. When I was scrolling the source code I noticed this block:
+I looked at the packets a bit more and tried to extract data from the packets behind the final listing, but did not find anything. I then decided to look at the [source code](https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/linux/misc/tplink_archer_a7_c7_lan_rce.rb) of the exploit, as it was linked on the above URL. When I was scrolling the source code I noticed this block:
 
 ```ruby
 ### Line 234
@@ -46,7 +46,7 @@ It looks like the router is looking for encrypted packets for this exploit to wo
 udp_sock.put(tpdp_packet)
 ```
 
-I think filtered all UDP packets from our host (192.168.0.105) to the router (192.168.0.1) that were longer than 150 bytes (there were some other casting packets of smaller size).
+I then filtered down to all UDP packets from our host (192.168.0.105) to the router (192.168.0.1) that were longer than 150 bytes (there were some other casting packets of smaller size).
 
 ![./wireshark.png](./wireshark.png)
 
@@ -62,7 +62,6 @@ import Crypto.Cipher.AES
 # ip.src == 192.168.0.105 && udp && udp.length > 175
 # Then in Wireshark: File > Export Packet Dissections > As JSON
 jf = open("./ac_json.json", "r").read()
-
 jdata = json.loads(jf)
 
 # AES decryption information defined in the exploit code
