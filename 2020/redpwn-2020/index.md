@@ -1,0 +1,2 @@
+- [12-shades-of-redpwn](12-shades-of-redpwn)
+- [uglybash](uglybash)
