@@ -7,3 +7,4 @@ Any missing images or files I reference in my writeups can be found directly in 
 
 #### Table of Contents
 - [2020](2020)
+- [2021](2021)
