@@ -34,9 +34,8 @@ Modulus:
 Exponent: 65537 (0x10001)
 ```
 
-Ok, so I convert this to an integer, and find that it is only 119 digits long. I look it up on factordb and sure enough it is already facotred for me.
-
-http://factordb.com/index.php?query=31864103015143373750025799158312253992115354944560440908105912458749205531455987590931871433911971516176954193675507337
+Ok, so I convert this to an integer, and find that it is only 119 digits long. I look it up on factordb and sure enough it is [already facotred for me](http://factordb.com/index.php?query=31864103015143373750025799158312253992115354944560440908105912458749205531455987590931871433911971516176954193675507337
+).
 
 I was able to take these two values and use them as P and Q to reverse the RSA inplementation used on the encrypted text. We also get the exponent value we need from the `pub.pem` file as well.
 
